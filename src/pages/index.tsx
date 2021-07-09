@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import Header from '../components/Header'
 import style from './home.module.scss'
 
 const Landing: React.FC = () => {
@@ -8,6 +8,7 @@ const Landing: React.FC = () => {
       <Head>
         <title>Codehouse</title>
       </Head>
+      <Header/>
       <h1>js</h1>
     </div>
   )

@@ -1,7 +1,13 @@
 @use '../styles/_colors';
 
 .container{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #f1ede9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 160px 20px;
+  
 }
