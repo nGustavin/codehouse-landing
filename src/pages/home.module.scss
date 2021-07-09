@@ -1,13 +1,43 @@
-@use '../styles/_colors';
+@use '../styles/colors';
+@use '../styles/breakpoints';
 
 .container{
   width: 100vw;
   height: 100vh;
-  background: #f1ede9;
+  background: colors.$background;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 160px 20px;
+  padding: 8% 20px 0px 20px;
   
+  @media (max-width: breakpoints.$laptop){
+    padding: 11% 0px 0px 0px;
+  }
+
+  >main{
+    width: 100%;
+    background-color: cornsilk;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    >div{
+      width: 40%;
+      background-color: darkmagenta;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    >aside{
+      width: 50%;
+      background-color: crimson;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
