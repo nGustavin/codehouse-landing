@@ -7,8 +7,8 @@ import style from './header.module.scss'
 const Header: React.FC = () => {
   return(
     <div className={style.Container}> 
-      <div className={style.ImageContainer}>
-        <Image width='160' src={Logo} objectFit="contain"/>
+      <div className="ImageContainer">
+        <Image width='160' src={Logo} objectFit="fill" alt="Codehouse"/>
       </div>
       <main>
         <Button value="Features"/>
