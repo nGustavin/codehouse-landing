@@ -10,34 +10,68 @@
   padding: 8% 20px 0px 20px;
   
   @media (max-width: breakpoints.$laptop){
-    padding: 11% 0px 0px 0px;
+    padding: 8% 0px 0px 0px;
   }
 
   >main{
     width: 100%;
-    background-color: cornsilk;
+    // background-color: cornsilk;
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: space-between;
 
+   
     >div{
-      width: 40%;
-      background-color: darkmagenta;
+      width: 45%;
+      // background-color: darkmagenta;
       height: 100%;
-
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: flex-start;
+      gap: 10%;
+      padding: 50px 0px 0px 310px;
+
+      @media (max-width: breakpoints.$laptop){
+        width: 40%;
+        overflow: hidden;
+        padding: 10px 0 0 110px;
+      }
+
+      >h1{
+        line-height: 95px;
+        font-size: 5rem;
+        font-weight: 500;
+        font-family: 'Work Sans', sans-serif;
+
+        @media (max-width: breakpoints.$laptop){
+          font-size: 4rem;
+          line-height: 70px;
+        }
+      }
+      
+      >p{
+        font-size: 22px;
+      }
+
+      >div{
+        height: 70px;
+      }
     }
 
     >aside{
-      width: 50%;
-      background-color: crimson;
+      width: 55%;
+      height: 100%;
+      // background-color: crimson;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex;
+
+      @media (max-width: breakpoints.$laptop){
+        width: 60%;
+        padding-right: 120px;
+      }
     }
   }
 }

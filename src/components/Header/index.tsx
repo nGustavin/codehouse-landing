@@ -11,12 +11,12 @@ const Header: React.FC = () => {
         <Image width='160' src={Logo} objectFit="contain"/>
       </div>
       <main>
-        <h4>Features</h4>
-        <h4>Solutions +</h4>
-        <h4>Resources</h4>
-        <h4>Pricing 🌶</h4>
+        <Button value="Features"/>
+        <Button value="Solutions +"/>
+        <Button value="Resources"/>
+        <Button value="Pricing 🌶"/>
       </main>
-      <div className={style.ButtonContainer}>
+      <div>
         <Button value="Log In"/>
         <Button value="Try for free" filled/>
       </div>
