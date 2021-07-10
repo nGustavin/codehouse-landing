@@ -5,13 +5,20 @@ import { Button } from '../components/DefaultButton'
 import Header from '../components/Header'
 import style from './home.module.scss'
 import Illustration from '../assets/illustrator.svg'
+import { useEffect, useState } from 'react'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 const Landing: React.FC = () => {
 
-  const pageWidth  = document.documentElement.scrollWidth;
-  const pageHeight = document.documentElement.scrollHeight;
+  const [screenWidth, screenHeight] = useWindowSize()
 
-  console.log(pageHeight, pageWidth)
+  
+  const breakpoints = {
+    mobile: 375,
+    mobileL: 411,
+    tablet: 768,
+    laptop: 1366
+  }
 
   return (
     <div className={style.container}>
@@ -21,7 +28,7 @@ const Landing: React.FC = () => {
       <Header/>
       <main>
         <div>
-          {/* {screenWidth < 1700 ? null :  <h1>Get help with coding from  engineers</h1>} */}
+          {screenWidth <= breakpoints.tablet ? null : <h1>Get help with coding from  engineers</h1>}
           <p>
             Learn how to code efficiently and create 
             apps and games that work. Consult with 
