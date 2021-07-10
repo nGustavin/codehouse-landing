@@ -7,6 +7,12 @@ import style from './home.module.scss'
 import Illustration from '../assets/illustrator.svg'
 
 const Landing: React.FC = () => {
+
+  const pageWidth  = document.documentElement.scrollWidth;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  console.log(pageHeight, pageWidth)
+
   return (
     <div className={style.container}>
       <Head>
@@ -15,10 +21,10 @@ const Landing: React.FC = () => {
       <Header/>
       <main>
         <div>
-          <h1>Get help with <br/> coding from <br/> engineers</h1>
+          {/* {screenWidth < 1700 ? null :  <h1>Get help with coding from  engineers</h1>} */}
           <p>
-            Learn how to code efficiently and create <br/>
-            apps and games that work. Consult with <br/>
+            Learn how to code efficiently and create 
+            apps and games that work. Consult with 
             best experts to apply skils in action.
           </p>
           <div>

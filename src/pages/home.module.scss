@@ -12,9 +12,12 @@
   @media (max-width: breakpoints.$laptop){
     padding: 8% 0px 0px 0px;
   }
-
+  
   @media (max-width: breakpoints.$tablet){
-    padding: 40% 0px 0px 0px;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 0% 0px 10px 0px;
+    gap: 30px;
   }
 
   >main{
@@ -24,6 +27,7 @@
     height: 100%;
     align-items: center;
     justify-content: space-between;
+
 
    
     >div{
@@ -44,10 +48,11 @@
       }
 
       @media (max-width: breakpoints.$tablet) {
-        width: 50%;
+        gap: 5%;
+        overflow: visible;
+        width: 45%;
+        
         padding: 0px 0px 0px 40px;
-
-    
       }
 
       >h1{
@@ -60,10 +65,19 @@
           font-size: 4rem;
           line-height: 70px;
         }
+
+        @media (max-width: breakpoints.$tablet){
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
       }
       
       >p{
         font-size: 22px;
+
+        @media (max-width: breakpoints.$tablet){
+          font-size: 1.3rem;
+        }
       }
 
       >div{
@@ -74,7 +88,7 @@
     >aside{
       width: 55%;
       height: 100%;
-      // background-color: crimson;
+      // background-color: yellow;
       display: flex;
       align-items: center;
       justify-content: flex;
@@ -82,6 +96,12 @@
       @media (max-width: breakpoints.$laptop){
         width: 60%;
         padding-right: 120px;
+      }
+
+      @media (max-width: breakpoints.$tablet){
+        width: 55%;
+        align-items: flex-start;
+        padding: 0px 40px 0px 0px;
       }
     }
   }

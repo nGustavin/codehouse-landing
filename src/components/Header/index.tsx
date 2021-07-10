@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         <Button value="Resources"/>
         <Button value="Pricing 🌶"/>
       </main>
-      <div>
+      <div className={style.ButtonContainer}>
         <Button value="Log In"/>
         <Button value="Try for free" filled/>
       </div>
