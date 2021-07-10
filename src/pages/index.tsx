@@ -2,11 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { Button } from '../components/DefaultButton'
+import { useWindowSize } from '../hooks/useWindowSize'
+import Illustration from '../assets/illustrator.svg'
 import Header from '../components/Header'
 import style from './home.module.scss'
-import Illustration from '../assets/illustrator.svg'
-import { useEffect, useState } from 'react'
-import { useWindowSize } from '../hooks/useWindowSize'
 
 const Landing: React.FC = () => {
 
@@ -28,19 +27,31 @@ const Landing: React.FC = () => {
       <Header/>
       <main>
         <div>
-          {screenWidth <= breakpoints.tablet ? null : <h1>Get help with coding from  engineers</h1>}
+          <h1>Get help with coding from  engineers</h1>
           <p>
             Learn how to code efficiently and create 
             apps and games that work. Consult with 
             best experts to apply skils in action.
           </p>
-          <div>
-            <Button filled value="Start learning"/>
-            <Button value="Watch video"/>
-          </div>
+          {screenWidth <= breakpoints.tablet ? (null) : (
+            <div>
+              <Button filled value="Start learning"/>
+              <Button value="Watch video"/>
+            </div>
+          )}
         </div>
         <aside>
-          <Image src={Illustration} objectFit="contain" width="900" />
+          {screenWidth <= breakpoints.tablet ? (
+            <section>
+              <Image src={Illustration} objectFit="contain" width="900" />
+              <div>
+                <Button filled value="Start learning"/>
+                <Button value="Watch video"/>
+              </div>
+            </section>
+          ) : (
+            <Image src={Illustration} objectFit="contain" width="900" />
+          )}
         </aside>
       </main>
       

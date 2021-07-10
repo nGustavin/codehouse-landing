@@ -28,7 +28,11 @@
     align-items: center;
     justify-content: space-between;
 
-
+    @media (max-width: breakpoints.$tablet) {
+      margin-top: 30px;
+      gap: 30px;
+      flex-direction: column;
+    }
    
     >div{
       width: 45%;
@@ -48,11 +52,15 @@
       }
 
       @media (max-width: breakpoints.$tablet) {
-        gap: 5%;
+        gap: 0px;
         overflow: visible;
-        width: 45%;
-        
-        padding: 0px 0px 0px 40px;
+        width: 100%;
+        height: auto;
+        padding: 0px 35px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        // background: chocolate;
       }
 
       >h1{
@@ -67,7 +75,8 @@
         }
 
         @media (max-width: breakpoints.$tablet){
-          font-size: 2.5rem;
+          width: 50%;
+          font-size: 2.9rem;
           line-height: 50px;
         }
       }
@@ -76,7 +85,9 @@
         font-size: 22px;
 
         @media (max-width: breakpoints.$tablet){
-          font-size: 1.3rem;
+          font-size: 1.4rem;
+          width: 50%;
+          text-align: end;
         }
       }
 
@@ -93,15 +104,33 @@
       align-items: center;
       justify-content: flex;
 
+      
+
+      >section{
+        width: 100%;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15%;
+      }
+
       @media (max-width: breakpoints.$laptop){
         width: 60%;
         padding-right: 120px;
       }
 
       @media (max-width: breakpoints.$tablet){
-        width: 55%;
+        // background: cadetblue;
+        width: 100%;
         align-items: flex-start;
-        padding: 0px 40px 0px 0px;
+        padding: 0 40px 0px 40px;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -15px;
+        justify-content: flex-start;
+        gap: 20%;
       }
     }
   }
