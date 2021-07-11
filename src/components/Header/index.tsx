@@ -29,16 +29,16 @@ const Header: React.FC = () => {
       {screenWidth <= mobileL ? (
         <>
           <button onClick={openMenuBar} className={style.OpenMenuButton}>
-            <IoMdMenu color={'#FFF'} size={24}/>
+            <IoMdMenu color={'#000000'} size={24}/>
           </button>
           {isOpen ? (
             <div className={style.OpenedMenu}>
-              <div>
+              <main>
                 <Button value="Features"/>
                 <Button value="Solutions +"/>
                 <Button value="Resources"/>
                 <Button value="Pricing 🌶"/>
-              </div>
+              </main>
               <div className={style.ButtonContainerMenu}>
                 <Button value="Log In"/>
                 <Button value="Try for free" filled/>

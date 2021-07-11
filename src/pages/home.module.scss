@@ -20,6 +20,11 @@
     gap: 30px;
   }
 
+  @media (max-width: breakpoints.$mobile_large){
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   >main{
     width: 100%;
     // background-color: cornsilk;

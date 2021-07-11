@@ -1,7 +1,7 @@
 @use '../../styles/breakpoints';
 
 .Container{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -74,17 +74,47 @@
 }
 
 .OpenMenuButton{
-  display: fixed;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 75px;
+  right: 35px;
   width: 40px;
   height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 
 .OpenedMenu{
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  background-color: rgb(255, 255, 255);
+  width: 220px;
+  height: auto;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
 
+
+  >main{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .ClosedMenu{
-
+  position: absolute;
+  right: -100px;
+  top: 120px;
+  transition: 0.3s;
+  width: 220px;
+  height: 272px;
+  opacity: 0;
 }
