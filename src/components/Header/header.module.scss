@@ -29,7 +29,8 @@
 
   @media (max-width: breakpoints.$mobile_large){
     flex-direction: row;
-    
+    align-items: center;
+    justify-content: center;
   }
   
   >main{
@@ -60,4 +61,30 @@
     top: 4.5%;
     right: 20px;
   }
+}
+
+@media (max-width: breakpoints.$mobile_large){
+  .ButtonContainer{
+    display: none;
+  }
+
+  .ButtonContainerMenu{
+    width: 100%;
+  }
+}
+
+.OpenMenuButton{
+  display: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 30px;
+}
+
+.OpenedMenu{
+
+}
+
+.ClosedMenu{
+
 }

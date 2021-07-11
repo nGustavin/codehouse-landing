@@ -6,18 +6,11 @@ import { useWindowSize } from '../hooks/useWindowSize'
 import Illustration from '../assets/illustrator.svg'
 import Header from '../components/Header'
 import style from './home.module.scss'
+import breakpoints from '../utils/breakpoints'
 
 const Landing: React.FC = () => {
 
   const [screenWidth, screenHeight] = useWindowSize()
-
-  
-  const breakpoints = {
-    mobile: 375,
-    mobileL: 411,
-    tablet: 768,
-    laptop: 1366
-  }
 
   return (
     <div className={style.container}>
